@@ -41,3 +41,15 @@ code {
 
   height: auto;
 }
+
+
+
+.slide-in-left {
+width:  calc(100% + 19rem);
+transition: all 1.5s ease-in-out;
+transform:  translateX(-22rem);
+
+background-color: brown;
+}
+
+
