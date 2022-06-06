@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import Desk from './footerscrrens/desk';
+import Mobile from './footerscrrens/mobile';
 
 const Footer = () => {
 
@@ -37,7 +39,7 @@ useEffect(() => {
 
 {  !smallscreen  &&
 <div>
-    big
+    <Desk/>
 </div>
 }
 
@@ -47,7 +49,7 @@ useEffect(() => {
 
 {  smallscreen  &&
 <div>
-    small
+    <Mobile/>
 </div>
 }
 
