@@ -1,8 +1,11 @@
 import React from "react";
 // import categories  from "./data";
+import Footer from "../components/footer";
 import { arr, categories, arr2 } from "./data";
 import { useState, useEffect } from "react";
 import SectionOne from "../components/sectionOne";
+import Sliderproducts from "../components/sliderproducts";
+import Sonsection from "../components/sonsection";
 const Home = () => {
   console.log(categories);
   const [show, setShow] = useState(false);
@@ -98,6 +101,32 @@ border-gray-600  transition-all duration-100 w-[88%] mr-12 top-[29px]   shadow-2
 <div className="  mt-12  mb-12">
 
 <SectionOne/>
+
+</div>
+
+
+{/* ------slider---- */}
+
+
+<div className=" ml-12 mr-12 mt-12 mb-12  pb-24">
+
+<Sliderproducts/>
+
+</div>
+
+<div className=" ml-12 mr-12 mb-12 mt-12">
+
+
+<Sonsection/>
+
+
+</div>
+
+
+
+<div className=" mt-12 mb-12">
+
+<Footer/>
 
 </div>
 

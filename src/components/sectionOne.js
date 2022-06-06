@@ -1,5 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import Allproducts from "./allproducts";
+import FilterSide from "./FilterSide";
+import Sliderproducts from "./sliderproducts";
 const SectionOne = () => {
   const [slide, setSlide] = useState(false);
 
@@ -14,7 +17,11 @@ const SectionOne = () => {
 
             <div>
 
-<div className=" flex gap-4 font-bold">
+<div 
+
+onClick={() => setSlide(!slide)}
+
+className=" flex gap-4 font-bold">
 <p>Filter</p>
 
 <div>
@@ -35,7 +42,20 @@ const SectionOne = () => {
 
             {/* right-- */}
 
-            <div>sortby</div>
+            <div>
+
+<div>
+
+<div>
+    <h1 className=" font-bold">
+        Sort by
+    </h1>
+</div>
+
+</div>
+
+
+            </div>
           </div>
         </div>
 
@@ -43,12 +63,17 @@ const SectionOne = () => {
         <div
           className={` w-screen min-h-[100px] ${
             slide ? "slide-in-left" : ""
-          } flex justify-between`}
+          } flex justify-between  transition-all  duration-[1.5s]  ml-12`}
         >
           {/* -----filter left- */}
 
-          <div className={`w-[22rem]   `}>
-            <h1 onClick={() => setSlide(!slide)}>filter</h1>
+          <div className={`w-[22rem] mr-8  `}>
+            <h1 >
+
+<FilterSide/>
+
+
+            </h1>
           </div>
 
           {/* ---all products right- */}
@@ -56,7 +81,26 @@ const SectionOne = () => {
           <div
             className={`  ${slide ? " w-full ml-24" : "w-3/4"} `}
           >
-            all products
+            
+<div>
+
+    <Allproducts/>
+
+
+{/* ------slider products */}
+
+<div className="  mb-12 mt-12">
+
+
+
+
+
+</div>
+
+
+
+</div>
+
           </div>
         </div>
       </div>
